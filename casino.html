@@ -1,0 +1,44 @@
+<!-- casino.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Casino - Casino</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+  <nav class="bg-gray-800 p-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">Crypto Casino</div>
+    <div class="space-x-4">
+      <a href="index.html" class="hover:text-green-400">Home</a>
+      <a href="casino.html" class="hover:text-green-400">Casino</a>
+      <a href="sports.html" class="hover:text-green-400">Sports</a>
+      <a href="login.html" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Login</a>
+      <a href="profile.html" class="hover:text-green-400">Profile</a>
+    </div>
+  </nav>
+  <div class="text-center py-10">
+    <h1 class="text-4xl font-bold mb-4">Casino Games</h1>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl mb-4">Plinko</h2>
+      <canvas id="plinkoCanvas" width="600" height="400" class="bg-gray-800 rounded-lg mx-auto"></canvas>
+      <div class="mt-4">
+        <button onclick="dropPlinkoBall()" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Drop Ball</button>
+        <p id="plinkoResult" class="mt-4"></p>
+      </div>
+      <h2 class="text-2xl mt-8 mb-4">Dice Game</h2>
+      <div class="bg-gray-800 p-6 rounded-lg">
+        <p>Bet over or under 50. Provably fair!</p>
+        <input id="guess" type="text" placeholder="Enter 'over' or 'under'" class="w-full p-2 mb-4 bg-gray-700 text-white rounded">
+        <input id="betAmount" type="number" placeholder="Bet amount (e.g., 0.001 BTC)" class="w-full p-2 mb-4 bg-gray-700 text-white rounded">
+        <button onclick="playDice()" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Roll Dice</button>
+        <p id="diceResult" class="mt-4"></p>
+        <p id="diceHash" class="mt-2 text-sm text-gray-400"></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
