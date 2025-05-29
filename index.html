@@ -1,49 +1,169 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crypto Casino</title>
+  <title>Crypto Casino - Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { background-color: #1a1a1a; color: white; }
-  </style>
+  <style>body { background-color: #1a1a1a; color: white; }</style>
 </head>
 <body>
   <nav class="bg-gray-800 p-4 flex justify-between items-center">
     <div class="text-2xl font-bold">Crypto Casino</div>
     <div class="space-x-4">
-      <a href="#" class="hover:text-green-400">Home</a>
-      <a href="#" class="hover:text-green-400">Casino</a>
-      <a href="#" class="hover:text-green-400">Sports</a>
-      <a href="#" onclick="alert('Logging in...')" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Login</a>
+      <a href="index.html" class="hover:text-green-400">Home</a>
+      <a href="casino.html" class="hover:text-green-400">Casino</a>
+      <a href="sports.html" class="hover:text-green-400">Sports</a>
+      <a href="login.html" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Login</a>
     </div>
   </nav>
   <div class="text-center py-20 bg-gradient-to-r from-gray-800 to-gray-700">
     <h1 class="text-5xl font-bold mb-4">Ultimate Crypto Casino</h1>
-    <p class="text-xl mb-6">Bet with BTC, ETH, and more!</p>
-    <button onclick="alert('Bet placed! Check your wallet.')" class="bg-green-500 text-black px-6 py-3 rounded-full hover:bg-green-600">Start Betting</button>
+    <p class="text-xl mb-6">Roll with BTC, ETH, or DOGE. Slots, dice, and more!</p>
+    <a href="casino.html" class="bg-green-500 text-black px-6 py-3 rounded-full hover:bg-green-600">Start Gambling</a>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
     <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
       <h3 class="text-xl font-bold mb-2">Plinko</h3>
-      <p>Drop the ball, win big!</p>
-      <button onclick="alert('Starting Plinko...')" class="text-green-400 mt-4">Play Now</button>
+      <p>Drop the ball, chase the bag!</p>
+      <a href="casino.html" class="text-green-400 mt-4 inline-block">Play Now</a>
     </div>
     <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
       <h3 class="text-xl font-bold mb-2">Dice</h3>
-      <p>Provably fair dice rolls.</p>
-      <button onclick="alert('Rolling dice...')" class="text-green-400 mt-4">Play Now</button>
+      <p>Provably fair rolls, big wins!</p>
+      <a href="casino.html" class="text-green-400 mt-4 inline-block">Play Now</a>
     </div>
     <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
       <h3 class="text-xl font-bold mb-2">Slots</h3>
-      <p>Spin for jackpots!</p>
-      <button onclick="alert('Spinning slots...')" class="text-green-400 mt-4">Play Now</button>
+      <p>Spin it to win it!</p>
+      <a href="casino.html" class="text-green-400 mt-4 inline-block">Play Now</a>
     </div>
   </div>
-  <script>
-    // Add more interactivity if needed
-    console.log("Casino site loaded!");
-  </script>
 </body>
 </html>
+
+<!-- casino.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Casino - Casino</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body { background-color: #1a1a1a; color: white; }</style>
+</head>
+<body>
+  <nav class="bg-gray-800 p-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">Crypto Casino</div>
+    <div class="space-x-4">
+      <a href="index.html" class="hover:text-green-400">Home</a>
+      <a href="casino.html" class="hover:text-green-400">Casino</a>
+      <a href="sports.html" class="hover:text-green-400">Sports</a>
+      <a href="login.html" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Login</a>
+    </div>
+  </nav>
+  <div class="text-center py-10">
+    <h1 class="text-4xl font-bold mb-4">Casino Games</h1>
+    <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg">
+      <h2 class="text-2xl mb-4">Dice Game</h2>
+      <p>Bet over or under 50. Let’s roll!</p>
+      <input id="guess" type="text" placeholder="Enter 'over' or 'under'" class="w-full p-2 mb-4 bg-gray-700 text-white rounded">
+      <input id="betAmount" type="number" placeholder="Bet amount (e.g., 0.001 BTC)" class="w-full p-2 mb-4 bg-gray-700 text-white rounded">
+      <button onclick="playDice()" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Roll Dice</button>
+      <p id="result" class="mt-4"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- sports.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Casino - Sports</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body { background-color: #1a1a1a; color: white; }</style>
+</head>
+<body>
+  <nav class="bg-gray-800 p-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">Crypto Casino</div>
+    <div class="space-x-4">
+      <a href="index.html" class="hover:text-green-400">Home</a>
+      <a href="casino.html" class="hover:text-green-400">Casino</a>
+      <a href="sports.html" class="hover:text-green-400">Sports</a>
+      <a href="login.html" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Login</a>
+    </div>
+  </nav>
+  <div class="text-center py-20">
+    <h1 class="text-4xl font-bold mb-4">Sports Betting</h1>
+    <p class="text-xl mb-6">Bet on football, basketball, and more with crypto!</p>
+    <button onclick="alert('Sports betting coming soon!')" class="bg-green-500 text-black px-6 py-3 rounded-full hover:bg-green-600">View Matches</button>
+  </div>
+</body>
+</html>
+
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Casino - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body { background-color: #1a1a1a; color: white; }</style>
+</head>
+<body>
+  <nav class="bg-gray-800 p-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">Crypto Casino</div>
+    <div class="space-x-4">
+      <a href="index.html" class="hover:text-green-400">Home</a>
+      <a href="casino.html" class="hover:text-green-400">Casino</a>
+      <a href="sports.html" class="hover:text-green-400">Sports</a>
+      <a href="login.html" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Login</a>
+    </div>
+  </nav>
+  <div class="text-center py-20">
+    <h1 class="text-4xl font-bold mb-4">Login</h1>
+    <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg">
+      <input id="username" type="text" placeholder="Username" class="w-full p-2 mb-4 bg-gray-700 text-white rounded">
+      <input id="password" type="password" placeholder="Password" class="w-full p-2 mb-4 bg-gray-700 text-white rounded">
+      <button onclick="fakeLogin()" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Login</button>
+      <p id="loginResult" class="mt-4"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- script.js -->
+function playDice() {
+  const guess = document.getElementById('guess').value.toLowerCase();
+  const betAmount = document.getElementById('betAmount').value;
+  const result = document.getElementById('result');
+  if (!guess || (guess !== 'over' && guess !== 'under')) {
+    result.textContent = 'Yo, enter "over" or "under"!';
+    return;
+  }
+  if (!betAmount || betAmount <= 0) {
+    result.textContent = 'Put in a real bet amount, homie!';
+    return;
+  }
+  const roll = Math.floor(Math.random() * 100) + 1;
+  const win = (guess === 'over' && roll > 50) || (guess === 'under' && roll <= 50);
+  result.textContent = `Roll: ${roll}. You ${win ? 'hit the jackpot!' : 'busted!'}`;
+}
+
+function fakeLogin() {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  const result = document.getElementById('loginResult');
+  if (!username || !password) {
+    result.textContent = 'Fill in both fields, bro!';
+    return;
+  }
+  result.textContent = `Welcome back, ${username}! Let’s gamble!`;
+}
