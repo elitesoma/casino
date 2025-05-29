@@ -1,0 +1,12 @@
+/* styles.css */
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+button, a {
+  transition: all 0.3s ease;
+}
